@@ -33,14 +33,14 @@
   - name: Delete container
     docker_container:
       name: grafana-docker-container
-      image:  mywebsite-docker-image
+      image:  grafana-docker-image
       state: absent
       auto_remove: yes
 
   - name: grafana container
     docker_container:
       name: mywebsite-docker-container
-      image:  mywebsite-docker-image
+      image:  grafana-docker-image
       state: started
       restart: yes
       recreate: yes
