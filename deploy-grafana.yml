@@ -39,7 +39,7 @@
 
   - name: grafana container
     docker_container:
-      name: mywebsite-docker-container
+      name: grafana-docker-container
       image:  grafana-docker-image
       state: started
       restart: yes
