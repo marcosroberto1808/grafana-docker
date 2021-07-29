@@ -24,3 +24,11 @@ docker stop grafana-docker-container
 ### remove the container
 
 docker rm grafana-docker-container
+
+### delete all stopped containers
+
+docker rm -vf $(docker ps -a -q)
+
+### To delete all built images,
+
+docker rmi -f $(docker images -a -q)
