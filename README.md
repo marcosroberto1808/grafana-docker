@@ -32,3 +32,7 @@ docker rm -vf $(docker ps -a -q)
 ### To delete all built images,
 
 docker rmi -f $(docker images -a -q)
+
+### delete all local volumes
+
+docker volume rm $(docker volume ls -q)
