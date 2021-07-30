@@ -34,5 +34,5 @@
   - name: Run `docker-compose up` again
     docker_compose:
       project_src: /home/vagrant/grafana-deploy/
-      build: no
+      build: yes
     register: output
