@@ -14,6 +14,10 @@
     pip:
       name: docker
 
+  - name: Install Docker Compose Module for Python
+    pip:
+      name: docker-compose
+
   - name: Tear down existing services
     docker_compose:
       project_src: /home/vagrant/grafana-deploy/
