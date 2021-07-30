@@ -15,12 +15,12 @@
       name: docker
 
   - name: Tear down existing services
-    community.docker.docker_compose:
+    docker_compose:
       project_src: /home/vagrant/grafana-deploy/
       state: absent
 
   - name: Create and start services
-    community.docker.docker_compose:
+    docker_compose:
       project_src: /home/vagrant/grafana-deploy/
     register: output
 
@@ -28,7 +28,7 @@
       var: output
 
   - name: Run `docker-compose up` again
-    community.docker.docker_compose:
+    docker_compose:
       project_src: /home/vagrant/grafana-deploy/
       build: no
     register: output
